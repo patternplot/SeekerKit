@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://code.jquery.com data: gap: 'unsafe-inline' 'unsafe-eval' https://ssl.gstatic.com; style-src 'self' http://code.jquery.com 'unsafe-inline' 'unsafe-eval'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    
+    <title>Seeker Kit</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/skit.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+   
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/skit.css" />
+    <style>
+            #footer
+            {
+                position: absolute;
+                bottom: 0;
+               width: 100%;
+                text-align:center;
+            }
+        #container
+            {
+                margin: 10px;
+                width:95%;
+            }
+        #myCanvas
+            {
+                border: solid 1px blue; 
+                width:100%;
+            }
+        
+        </style>
+    
+</head>
+
+<body>
+        <div data-role="page" id="container">
+        <div data-role="header">
+            <h1>Pranayama</h1>
+        </div> <!-- header -->
+        <div data-role="main" class="ui-content">
+         
+           <ul data-role="listview" data-inset="true">
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/apple.png">
+                <h2>iOS 6.1</h2>
+                <p>Apple released iOS 6.1</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/blackberry_10.png">
+                <h2>BlackBerry 10</h2>
+                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p class="ui-li-aside">BlackBerry</p>
+            </a></li>
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/lumia_800.png">
+                <h2>History</h2>
+                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                <p class="ui-li-aside">Windows Phone</p>
+            </a></li>
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/galaxy_express.png">
+                <h2>Advaita Vedanta</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Samsung</p>
+            </a></li>
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/nexus_7.png">
+                <h2>Asanas</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Android</p>
+            </a></li>
+            <li><a href="./pranayama.html">
+                <img class="ui-li-thumb" src="../_assets/img/firefox_os.png">
+                <h2>Pranyama</h2>
+                <p>ZTE to launch Firefox OS smartphone at MWC</p>
+                <p class="ui-li-aside">Firefox</p>
+            </a></li>
+            <li><a href="#">
+                <img class="ui-li-thumb" src="../_assets/img/tizen.png">
+                <h2>Dhyana</h2>
+                <p>First Samsung phones with Tizen can be expected in 2013</p>
+                <p class="ui-li-aside">Tizen</p>
+            </a></li>
+            <li><a href="#">
+                <h2>Symbian</h2>
+                <p>Nokia confirms the end of Symbian</p>
+                <p class="ui-li-aside">Symbian</p>
+            </a></li>
+        </ul>   
+        </div> <!-- main -->
+        <div data-role="footer" id="footer">
+        <p>Seeker Kit</p>
+        </div> <!-- footer -->
+        </div> <!-- page -->
+        
+      
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+      <script type="text/javascript" src="cordova.js"></script>
+    </body>
+
+</html>
